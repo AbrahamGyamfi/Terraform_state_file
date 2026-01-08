@@ -1,0 +1,11 @@
+# Example configuration for backend module
+# Copy this file to terraform.tfvars and update with your values
+
+aws_region = "us-east-1"
+
+# S3 bucket name must be globally unique
+# Use your initials or organization name to make it unique
+bucket_name = "my-terraform-state-bucket-unique-name"
+
+# DynamoDB table name for state locking
+dynamodb_table_name = "terraform-state-lock"

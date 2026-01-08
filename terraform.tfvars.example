@@ -1,0 +1,34 @@
+# Example configuration file
+# Copy this to terraform.tfvars and update with your values
+
+# AWS Configuration
+aws_region = "us-east-1"
+
+# Project Configuration
+project_name = "terraform-lab"
+
+# Network Configuration
+vpc_cidr          = "10.0.0.0/16"
+subnet_cidr       = "10.0.1.0/24"
+availability_zone = "us-east-1a"
+
+# Security Configuration
+# IMPORTANT: Replace with your IP address for SSH access
+# Get your IP: curl ifconfig.me
+allowed_ssh_cidr = "0.0.0.0/0"  # Change this to YOUR_IP/32 for security
+
+# EC2 Configuration
+instance_type = "t2.micro"
+
+# AMI ID for Amazon Linux 2 in us-east-1
+# Update this if using a different region or OS
+ami_id = "ami-0c02fb55b7eb2c642"
+
+# EC2 Key Pair (optional)
+# Leave empty if you don't need SSH access
+# If you want SSH, create a key pair in AWS Console first
+key_name = ""
+
+# Backend Configuration (for reference only - not used in this file)
+# backend_s3_bucket      = "your-unique-bucket-name"
+# backend_dynamodb_table = "terraform-state-lock"
