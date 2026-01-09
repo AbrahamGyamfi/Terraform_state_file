@@ -215,14 +215,25 @@ cd modules/backend && terraform destroy
 
 ## Screenshots
 
-Infrastructure deployment and resources in AWS Console are documented in the `Screenshots/` directory:
+Infrastructure deployment and resources in AWS Console:
 
-- **DynamoDB**: State locking table
-- **EC2 Configuration**: Instance details
-- **S3 State File**: Remote state storage
-- **Terraform Plan**: Planning output
-- **Terraform Apply**: Deployment output
-- **Terraform Destroy**: Cleanup output
+### DynamoDB State Locking Table
+![DynamoDB State Lock Table](Screenshots/DynamoDB.png)
+
+### EC2 Instance Configuration
+![EC2 Configuration](Screenshots/EC2_config.png)
+
+### S3 Remote State Storage
+![S3 State File](Screenshots/s3_state_file.png)
+
+### Terraform Plan Output
+![Terraform Plan](Screenshots/terraform_plan.png)
+
+### Terraform Apply Output
+![Terraform Apply](Screenshots/terraform_apply.png)
+
+### Terraform Destroy Output
+![Terraform Destroy](Screenshots/terraform_destroy.png)
 
 ## Notes
 
@@ -253,6 +264,7 @@ Infrastructure deployment and resources in AWS Console are documented in the `Sc
 aws ec2 describe-images --owners amazon \
   --filters "Name=name,Values=amzn2-ami-hvm-*-x86_64-gp2" \
   --query 'Images[0].ImageId' --output text
+```
 
 
 
